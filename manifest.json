@@ -1,0 +1,34 @@
+{
+    "manifest_version": 2,
+
+    "name": "Video capturing extension",
+    "description": "This extension captures and downloads a video of an iframe in the current webpage",
+    "version": "1.0",
+
+    "author": "Carmen Chapa",
+    "icons": { "48": "video-icon.png" },
+
+    "page_action": {
+        "default_icon": "video-icon.png",
+        "default_popup": "popup.html",
+        "default_title": "videoshoot"
+    },
+    "permissions": [
+        "tabs",
+        // "http://*/*", "https://*/*",
+        "activeTab",
+        "https://ajax.googleapis.com/"
+    ],
+    /////
+    "background": {
+        "scripts": ["createvideo.js", "whammy.js", "download.js", "background.js", "jquery-3.2.1.min.js"]
+            // "scripts": ["download.js", "whammy.js"]
+
+    },
+    "content_scripts": [{
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["contentscript.js"],
+        "run_at": "document_idle",
+        "all_frames": false
+    }]
+}

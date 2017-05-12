@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Set Page Color Popup</title>
+    <style>
+    body {
+      overflow: hidden;
+      margin: 0px;
+      padding: 0px;
+      background: white;
+    }
+
+    div:first-child {
+      margin-top: 0px;
+    }
+
+    div {
+      display: inline-flex;
+      cursor: pointer;
+      text-align: center;
+      /*padding: 3px;*/
+      font-family: sans-serif;
+      font-size: 0.8em;
+      /*width: 100px;*/
+      margin-top: 1px;
+      /*background: #cccccc;*/
+    }
+    /*div:hover {
+      background: #aaaaaa;
+    }*/
+    #container{
+      /*border: 1px solid red;*/
+      margin: auto;
+      color: blue;
+      width: 45px;
+      height: 20px;
+    }
+    #green {
+      /*display: inline;*/
+      margin:auto;
+      margin-top:5px;
+      background-image: url("play.png");
+       background-repeat: no-repeat;
+      /*border: 1px solid red;*/
+      color: red;
+     
+      width: 15px;
+      height: 15px;
+    }
+    #green:hover{
+      background-image: url("play-hl.png");
+    }
+   
+    #red {
+      /*display: inline;*/
+      margin:auto;
+      margin-top:5px;
+      left: 20px;
+      background-image: url("stop.png");
+      background-repeat: no-repeat;
+
+      /*border: 1px solid green;*/
+      color: green;
+      
+      width: 15px;
+      height: 15px;
+    }
+    #red:hover{
+      background-image: url("stop-hl.png");
+    }
+  
+    </style>
+    <!-- <script src="popup.js"></script> -->
+    <script src="background.js"></script>
+    <script src="whammy.js"></script>
+    <!-- <script src="contentscript.js"></script> -->
+
+  </head>
+  <body>
+    <div id="container">
+      <div id="green"></div>
+      <div id="red"></div>
+    </div>
+  </body>
+</html>
+
